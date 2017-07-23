@@ -175,9 +175,6 @@ border-radius:5px;
 var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
-    .when("/test", {
-        templateUrl : "verification1.htm"
-    });
     .otherwise({
         templateUrl : "main.htm"
     });
