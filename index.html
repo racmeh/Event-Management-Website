@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog</title>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<style>
+
+@media (max-width: 765px) {
+   
+    .navbar-toggle {
+        display: block;
+        background-color:#D3D3D3;
+        
+    }
+    .navbar-collapse {
+        border-top: 0px solid transparent;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .navbar-collapse.collapse {
+        display:toggle;
+    }
+    .navbar-nav {
+        float: none;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+.navbar-inverse .navbar-nav > .active > a{
+color:white;
+background:#2E90CC;
+}
+.navbar-inverse .navbar-nav > .active > a:hover{
+color:white;
+background:#2E90CC;
+}
+.navbar-inverse .navbar-nav > .second > a:hover{
+color:white;
+background:#D0D0D0;
+}
+.navbar-inverse .navbar-nav > .second > a{
+color:black;
+background-color:white;
+}
+.navbar-inverse .navbar-nav > .third > a:hover{
+color:white;
+background:#2E90CC;
+}
+.third{
+background-color:white;
+}
+.navbar-inverse .navbar-nav > .fourth > a:hover{
+color:white;
+background:#2E90CC;
+}
+.fourth{
+background-color:white;
+}
+.navbar-inverse .navbar-nav > .fifth > a:hover{
+color:white;
+background:#2E90CC;
+}
+
+.fifth{
+background:white;
+}
+
+}
+
+@media (min-width: 765.1px)
+{
+.navbar .container-fluid .abc1 .navbar-collapse .navbar-nav .second:hover,.navbar .container-fluid .abc1 .navbar-collapse .navbar-nav .second:focus{
+background-color:red;
+color:#2E90CC;
+}
+.navbar-inverse .navbar-nav > .second > a{
+color:white;
+}
+
+ .navbar-inverse .navbar-nav > .active > a, 
+ .navbar-inverse .navbar-nav > .active > a:hover, 
+ .navbar-inverse .navbar-nav > .active > a:focus {
+      color: black;
+      background-color:white;
+ }
+
+
+}
+
+.navbar {
+   background-color: #2E90CC;
+   background: #2E90CC;
+   border-color: transparent;
+   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body{
+overflow-x:hidden;
+overflow-y:hidden;
+}
+.form2
+{
+width:25vw;
+position:absolute;
+top:5vw;
+left:9vw;
+}
+.icon1
+{
+position:absolute;
+top:5.4vw;
+left:4vw;
+}
+.login
+{
+
+box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-color:#FFFFFF;
+border-radius:5px;
+
+}
+</style>
+</head>
+
+<body ng-app="myApp">
+
+<div style="height:50px;background-color:white;">
+<nav class="navbar transparent navbar-inverse navbar-fixed-top hr">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="kp-icon.jpg" width="80px" height="50px" alt="Krispy Papad" style="position:fixed;top:0%;left:0%;">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    </div>
+<div class="abc1">
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right" style="font-family:Arial;">
+      <li class="active"><a href="#">Home</a></li>
+<li class="second"><a href="#" ><i class="fa fa-map-marker" style="font-size:20px;"aria-hidden="true"></i>&nbsp;&nbsp;Location</a></li>
+    </ul>
+</div>
+</div>
+  </div>
+</nav>
+</div>
+
+<div>
+<img style="width:100vw;height:40vw;" src="e.jpg" alt="Event">
+<div class="container" style="position:absolute;margin-left:32%;margin-top:-24%;font-family:Arial;">
+<div ng-view></div>
+</div>
+</div>
+<div style="background-color:#E0E0E0;font-family: Arial;font-size:1.1vw;width:100%;bottom:0%;position:absolute;padding:1%;">
+<span><a href="#">&nbsp;About</a><span> | </span><a href="#">Help</a><span> | </span><a href="#">Terms and Conditions</a><span> | </span><a href="#">Privacy policy</a></span><span style="float:right">Copyrights 2017 Krispy Papad LLP&nbsp;</span>
+</div>
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+
+    .otherwise({
+        templateUrl : "main.htm"
+    });
+});
+</script>
+</body>
+</html>
