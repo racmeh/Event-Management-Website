@@ -165,6 +165,7 @@ border-radius:5px;
 <div>
 <img style="width:100vw;height:40vw;" src="e.jpg" alt="Event">
 <div class="container" style="position:absolute;margin-left:32%;margin-top:-24%;font-family:Arial;">
+   <a href="#!/"></a>
 <div ng-view></div>
 </div>
 </div>
@@ -181,7 +182,7 @@ app.config(function($routeProvider) {
    .when("/test1", {
         templateUrl : "verification1.htm"
     })
-    .otherwise({
+    .when("/",{
         templateUrl : "main.htm"
     });
 });
