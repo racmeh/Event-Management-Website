@@ -263,6 +263,7 @@ input[type=radio]:checked + label::after {
 .rotate{
   transform: rotate(180deg);
 }
+
 button.accordion {
     background-color: #eee;
     color: #444;
@@ -287,7 +288,6 @@ div.panel {
     padding:0 1vw;
     background-color: white;
     display:none;
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
@@ -426,8 +426,12 @@ function function4(){
 <div style="width:100%;background-color:#2E90CC;font-family:Arial;font-size:1.2vw;color:white;text-align:center;border-radius:4px 4px 0px 0px;">Details</div>
 <div style="height:1vw;"></div>
 <span style="font-family:Arial;font-size:1.1vw">&nbsp;<span style="color:#2E90CC;font-weight:bold;">Date:</span> <span style="color:#A8A8A8;">19<sup>th</sup>Jan, 2017</span></span><div style="height:1vw;"></div>
+<span style="font-family:Arial;font-size:1.1vw">&nbsp;<span style="color:#2E90CC;font-weight:bold;">Date:</span> <span style="color:#A8A8A8;">19<sup>th</sup>Jan, 2017</span></span><div style="height:1vw;"></div>
 <span style="font-family:Arial;font-size:1.1vw">&nbsp;<span style="color:#2E90CC;font-weight:bold;">Venue:</span> <span style="color:#A8A8A8;">8<sup>th</sup>Cross Road, Dasrahalli Main &nbsp;Road, Bhuvaneshwari Nagar, Hebbal, &nbsp;Bangalore</span></span><div style="height:1vw;"></div>
-<span style="font-family:Arial;font-size:1.1vw">&nbsp;<span style="color:#2E90CC;font-weight:bold;">Organiser details:</span> <span style="color:#A8A8A8;">ABC Events</span></span>
+<span style="font-family:Arial;font-size:1.1vw">&nbsp;<span style="color:#2E90CC;font-weight:bold;">Organiser's Name:</span> <span style="color:#A8A8A8;">ABC Events</span></span><div style="height:1vw;"></div>
+<span style="font-family:Arial;font-size:1.1vw">&nbsp;<span style="color:#2E90CC;font-weight:bold;">Organiser's E-mail ID:</span> <span style="color:#A8A8A8;">ABC Events</span></span><div style="height:1vw;"></div>
+<span style="font-family:Arial;font-size:1.1vw">&nbsp;<span style="color:#2E90CC;font-weight:bold;">Organiser's Phone:</span> <span style="color:#A8A8A8;">ABC Events</span></span><div style="height:1vw;"></div>
+<span style="font-family:Arial;font-size:1.1vw">&nbsp;<span style="color:#2E90CC;font-weight:bold;">Organiser's Address:</span> <span style="color:#A8A8A8;">ABC Events</span></span><div style="height:1vw;"></div>
 </div>
 
 
@@ -483,7 +487,7 @@ function function4(){
 <div id="map" style="width:100%;height:15vw;background:yellow"></div>
 </div>
 
-<div class="w3-card-2" style="width:20vw;margin-left:2%;font-family:Arial;">
+<div class="w3-card-2" style="width:60vw;margin-left:2%;font-family:Arial;">
 <div style="width:100%;background-color:#2E90CC;font-family:Arial;font-size:1.2vw;color:white;text-align:center;border-radius:4px 4px 0px 0px;">About The Event</div>
 <div style="height:1vw;"></div>
 <span style="font-family:Arial;font-size:1.1vw">&nbsp;<span style="color:#2E90CC;font-weight:bold;">Artists:</span> <span style="color:#A8A8A8;">Sunil Grover</span></span><div style="height:1vw;"></div>
@@ -492,7 +496,7 @@ function function4(){
 </div>
 
 </div>
-<div style="height:3vw;">
+<div style="height:7vw;">
 </div>
 
 <div style="position:absolute;width:100%;">
@@ -628,6 +632,21 @@ function function4(){
     </div>
 </div>
 <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+
 function myMap() {
 var mapOptions = {
     center: new google.maps.LatLng(51.5, -0.12),
@@ -637,20 +656,6 @@ var mapOptions = {
 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].onclick = function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  }
-}
 function scrollWin(x, y) {
     window.scrollBy(x, y);
 }
