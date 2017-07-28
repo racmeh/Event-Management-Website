@@ -291,7 +291,37 @@ border:0.1vw solid #90EE90;
 .btn{
 font-size:1.1vw;font-family:Arial;margin-left:2%;background-color:white;color:#90EE90;border:0.1vw solid #90EE90;font-weight:bold;
 }
+ input[type="text"]{
+    border: 0;
+    border-radius: 0;
+  outline: 0;
+  font-size:1.5vw;
+  color:black;
+  background: transparent;
+  border-bottom: 1px solid #2E90CC;
+}
+ input[type="email"]{
+    border: 0;
+    border-radius: 0;
+  outline: 0;
+  font-size:1.5vw;
+  color:black;
+  background: transparent;
+  border-bottom: 1px solid #2E90CC;
+}
+::-webkit-input-placeholder {
+   font-size: 1.4vw!important;
+color:#B0B0B0;
+}
 
+:-moz-placeholder {
+      font-size: 1.5vw!important;
+color:#B0B0B0;
+}
+::-moz-placeholder {
+      font-size: 1.5vw!important;
+color:#B0B0B0;
+}
 </style>
 
 <script>
@@ -414,7 +444,7 @@ function function4(){
 </div>
 <div style="height:2vw;">
 </div>
-<div><span style="color:#202020;font-weight:bold;margin-left:2%;font-size:4.3vw;font-family:Arial;">The Sunil Grover Show</span><span style="margin-left:33.5%;"><a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:3vw;color:#3b5998;"></i></a><span style="color:#F6F6F6;font-size:1vw;">Lorem</span><a href="#"><i class="fa fa-twitter-square" aria-hidden="true" style="font-size:3vw;color:#0084b4;"></i></a><span style="color:#F6F6F6;font-size:1vw;">Lorem</span><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true" style="font-size:3vw;color:#C92228;"></i></a></span></div>
+<div><span style="color:#202020;font-weight:bold;margin-left:2%;font-size:4.3vw;font-family:Arial;">The Sunil Grover Show</span><span style="margin-left:33.5%;"><a href="#"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size:3vw;color:#3b5998;"></i></a><span style="color:#F6F6F6;font-size:1vw;">Lor</span><a href="#"><i class="fa fa-twitter-square" aria-hidden="true" style="font-size:3vw;color:#0084b4;"></i></a><span style="color:#F6F6F6;font-size:1vw;">Lor</span><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true" style="font-size:3vw;color:#C92228;"></i></a><span style="color:#F6F6F6;font-size:1vw;">Lor</span><a href="#"><i class="fa fa-google-plus" aria-hidden="true" style="font-size:3vw;color:#d34836;"></i></a></span></div>
 <div style="margin-left:2%;font-family:Calibri Light;">
 <div style="display:inline-block;background-color:#F4F4F4;font-size:1vw;border-radius:0.8vw;color:#C0C0C0;border:0.08vw solid #E0E0E0;font-weight:bold;">&nbsp;&nbsp;Sunil Grover&nbsp;&nbsp;</div>
 <div style="display:inline-block;background-color:#F4F4F4;font-size:1vw;border-radius:0.8vw;color:#C0C0C0;border:0.08vw solid #E0E0E0;font-weight:bold;">&nbsp;&nbsp;Bangalore&nbsp;&nbsp;</div>
@@ -423,6 +453,7 @@ function function4(){
 </div>
 <div style="height:3vw;">
 </div>
+
 
 <div style="width:59.5vw;margin-right:4%;margin-left:40%;float:right;position:absolute;background-color:white;" class="">
 <div style="border-bottom:0.1vw solid #D8D8D8;">
@@ -437,23 +468,25 @@ function function4(){
 <div style="font-family:Arial;color:black;margin-left:2%;font-size:1.3vw;">&nbsp;Cost:<span style="float:right;margin-right:2%;"><i class="fa fa-inr" aria-hidden="true" style="font-size:1vw;color:black;"></i>&nbsp;632</span></div>
 <div style="height:0.5vw;">
 </div>
-<div style="font-family:Arial;color:black;margin-left:2%;font-size:1.3vw;">&nbsp;Coupon code:<span style="float:right;margin-right:15%;"> <input type="text" style="width:28vw;height:2.3vw;margin-left:26.5%;margin-top:0%;" class="form-control" id="pwd" placeholder="Code"></span></div>
-<div style="height:1vw;">
-</div>
 <div style="font-family:Arial;color:black;margin-left:2%;font-size:1.3vw;">&nbsp;Tax:<span style="float:right;margin-right:2%;">2%</span></div>
 <div style="height:0.5vw;">
 </div>
-<div style="font-family:Arial;color:black;margin-left:2%;font-size:1.3vw;">&nbsp;Discount:<span style="float:right;margin-right:2%;">3%</span></div>
+<div style="font-family:Arial;color:black;margin-left:2%;font-size:1.3vw;">&nbsp;Discount:<span style="float:right;margin-right:2%;">2%</span></div>
 <div style="height:0.5vw;">
 </div>
+<div style="font-family:Arial;color:black;margin-left:2%;font-size:1.3vw;">&nbsp;Coupon code:<span style="float:right;margin-right:15%;"> <input type="text" style="width:28vw;height:2.3vw;margin-left:26.5%;margin-top:0%;"  id="pwd" placeholder="Code"></span></div>
+<div style="height:1.5vw;">
+</div>
 </div>
 <div style="height:0.5vw;">
 </div>
+
+
 <div style="font-family:Arial;color:black;margin-left:2%;font-weight:bold;font-size:1.3vw;">&nbsp;Final Cost:<span style="float:right;margin-right:2%;"><i class="fa fa-inr" aria-hidden="true" style="font-size:1vw;color:black;"></i>&nbsp;612</span></div>
 <div style="height:1vw;">
 </div>
 <span>
-<a href="orderstatus1.html" style="text-decoration:none;"><span style="text-align:center;background-color:#90EE90;width:38%;margin-left:57%;border-radius:0.2vw;color:white;font-size:1.5vw;padding:0.5vw 8vw 0.5vw 8vw;">CHECKOUT</span></a>
+<a href="#" style="text-decoration:none;"><span style="text-align:center;background-color:#90EE90;width:38%;margin-left:57%;border-radius:0.2vw;color:white;font-size:1.5vw;padding:0.5vw 8vw 0.5vw 8vw;">CHECKOUT</span></a>
 <div style="height:1vw;">
 </div>
 </div>
@@ -476,13 +509,13 @@ function function4(){
 <form>
   <div class="form-group">
     <div style="font-size:1.1vw;font-family:Arial;margin-left:2%;font-weight:bold;">Email:</div>
-    <input style="width:28vw;height:2.3vw;margin-left:2%;" type="email" class="form-control" id="email" placeholder="E-mail">
+    <input style="width:31.5vw;height:2.3vw;margin-left:2%;margin-top:0" type="email" id="email" placeholder="E-mail">
   </div>
   <div class="form-group">
     <div style="font-size:1.1vw;font-family:Arial;margin-left:2%;font-weight:bold;">Phone:</div>
-    <input type="text" style="width:28vw;height:2.3vw;margin-left:2%;" class="form-control" id="pwd" placeholder="Phone">
+    <input type="text" style="width:31.5vw;height:2.3vw;margin-left:2%;margin-top:0" id="pwd" placeholder="Phone">
   </div>
- 
+  
 </form>
 <div style="height:1vw;">
 </div>
@@ -504,11 +537,11 @@ function function4(){
 <form>
   <div class="form-group">
     <div style="font-size:1.1vw;font-family:Arial;margin-left:2%;font-weight:bold;">Email:</div>
-    <input style="width:28vw;height:2.3vw;margin-left:2%;" type="email" class="form-control" id="email" placeholder="E-mail">
+    <input style="width:31.5vw;height:2.3vw;margin-left:2%;margin-top:0" type="email" id="email" placeholder="E-mail">
   </div>
   <div class="form-group">
     <div style="font-size:1.1vw;font-family:Arial;margin-left:2%;font-weight:bold;">Phone:</div>
-    <input type="text" style="width:28vw;height:2.3vw;margin-left:2%;" class="form-control" id="pwd" placeholder="Phone">
+    <input type="text" style="width:31.5vw;height:2.3vw;margin-left:2%;margin-top:0" id="pwd" placeholder="Phone">
   </div>
   
 </form>
@@ -532,11 +565,11 @@ function function4(){
 <form>
   <div class="form-group">
     <div style="font-size:1.1vw;font-family:Arial;margin-left:2%;font-weight:bold;">Email address:</div>
-    <input style="width:28vw;height:2.3vw;margin-left:2%;" type="email" class="form-control" id="email" placeholder="E-mail">
+    <input style="width:31.5vw;height:2.3vw;margin-left:2%;margin-top:0" type="email" id="email" placeholder="E-mail">
   </div>
   <div class="form-group">
     <div style="font-size:1.1vw;font-family:Arial;margin-left:2%;font-weight:bold;">Phone:</div>
-    <input type="text" style="width:28vw;height:2.3vw;margin-left:2%;" class="form-control" id="pwd" placeholder="Phone">
+    <input type="text" style="width:31.5vw;height:2.3vw;margin-left:2%;margin-top:0" id="pwd" placeholder="Phone">
   </div>
   
 </form>
