@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog</title>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+@media (max-width: 765px) {
+   
+    .navbar-toggle {
+        display: block;
+        background-color:#D3D3D3;
+        
+    }
+    .navbar-collapse {
+        border-top: 0px solid transparent;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .navbar-collapse.collapse {
+        display:toggle;
+    }
+    .navbar-nav {
+        float: none;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+.navbar-inverse .navbar-nav > .active > a{
+color:white;
+background:#2E90CC;
+}
+.navbar-inverse .navbar-nav > .active > a:hover{
+color:white;
+background:#2E90CC;
+}
+.navbar-inverse .navbar-nav > .second > a:hover{
+color:white;
+background:#D0D0D0;
+}
+.navbar-inverse .navbar-nav > .second > a{
+color:black;
+background-color:white;
+}
+.navbar-inverse .navbar-nav > .third > a:hover{
+color:white;
+background:#2E90CC;
+}
+.third{
+background-color:white;
+}
+.navbar-inverse .navbar-nav > .fourth > a:hover{
+color:white;
+background:#2E90CC;
+}
+.fourth{
+background-color:white;
+}
+.navbar-inverse .navbar-nav > .fifth > a:hover{
+color:white;
+background:#2E90CC;
+}
+
+.fifth{
+background:white;
+}
+
+}
+
+@media (min-width: 765.1px)
+{
+.navbar .container-fluid .abc1 .navbar-collapse .navbar-nav .second:hover,.navbar .container-fluid .abc1 .navbar-collapse .navbar-nav .second:focus{
+background-color:red;
+color:#2E90CC;
+}
+.navbar-inverse .navbar-nav > .second > a{
+color:white;
+}
+
+ .navbar-inverse .navbar-nav > .active > a, 
+ .navbar-inverse .navbar-nav > .active > a:hover, 
+ .navbar-inverse .navbar-nav > .active > a:focus {
+      color: black;
+      background-color:white;
+ }
+
+
+}
+
+.navbar {
+   background-color: #2E90CC;
+   background: #2E90CC;
+   border-color: transparent;
+   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body{
+overflow-x:hidden;
+overflow-y:hidden;
+background-color:#F6F6F6;
+}
+.form2
+{
+width:25vw;
+position:absolute;
+top:5vw;
+left:7vw;
+}
+.icon1
+{
+position:absolute;
+top:5.4vw;
+left:3vw;
+}
+.login
+{
+
+box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-color:#FFFFFF;
+border-radius:5px;
+
+}
+
+
+.footer-sm{
+  background-color: white;
+  color: #757575;
+  width: 102%;
+  height: 80px;
+  margin-left: 0px;
+}
+.footer-xs{
+  background-color: white;
+  color: #757575;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  text-align: center;
+}
+.panel-heading h3{
+  font-weight:bold;
+  font-size:1.1em;
+  color:grey;
+}
+.panel-body p{
+  color: grey;
+  font-size:1.2em;
+  padding-left: 20px;
+}
+.tab {
+  position: relative;
+  margin-bottom: -4px;
+  width: 100%;
+  color: #757575;
+  overflow: hidden;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #16a085;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.blue label {
+  background: #F5F5F5;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #1abc9c;
+
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.blue .tab-content {
+  background: white;
+}
+.tab-content p {
+  color: grey;
+  font-size:1.1em;
+  padding-left: 20px;
+}
+/* :checked */
+input:checked ~ .tab-content {
+  max-height: 10em;
+}
+/* Icon */
+label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + label::after {
+  content: "+";
+}
+input[type=radio] + label::after {
+  content: "\25BC";
+}
+input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
+.social-icons{
+  font-size: 1.4em;
+  padding: 4px;
+}
+.loading{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  background-color: white;
+  z-index: 2;
+}
+.loading-image{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.floating-button{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3;
+}
+.query-box{
+  background-color: white;
+  width: 350px;
+  height: 50px;
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.3);
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 3;
+  border-radius: 25px;
+  padding-left: auto;
+}
+*:focus {
+    outline: none;
+}
+@media screen and (max-width: 480px) {
+    .query-box {
+      width: 300px;
+    }
+}
+.rotate{
+  transform: rotate(180deg);
+}
+
+
+</style>
+<script>
+
+var $window           = $(window),
+    win_height_padded = $window.height() * 1.1,
+    isTouch           = Modernizr.touch;
+
+$window.on('scroll', revealOnScroll);
+
+function revealOnScroll() {
+  var scrolled = $window.scrollTop();
+  $(".revealOnScroll:not(.animated)").each(function () {
+    var $this     = $(this),
+        offsetTop = $this.offset().top;
+
+    if (scrolled + win_height_padded > offsetTop) {
+      if ($this.data('timeout')) {
+        window.setTimeout(function(){
+          $this.addClass('animated ' + $this.data('animation'));
+        }, parseInt($this.data('timeout'),10));
+      } else {
+        $this.addClass('animated ' + $this.data('animation'));
+      }
+    }
+  });
+}
+
+
+function function1(){
+  document.getElementById("tab-one").setAttribute("type","radio");
+  document.getElementById("tab-two").setAttribute("type","radio");
+  document.getElementById("tab-three").setAttribute("type","radio");
+
+  var x = document.getElementById("tab-one");
+    if(x.type === "radio"){
+      x.setAttribute("type","checkbox");
+    } else {
+      x.setAttribute("type","radio");
+    }
+
+}
+
+function function2(){
+  document.getElementById("tab-one").setAttribute("type","radio");
+  document.getElementById("tab-three").setAttribute("type","radio");
+  document.getElementById("tab-four").setAttribute("type","radio");
+
+
+  //function2();
+  var x = document.getElementById("tab-two");
+    if(x.type === "radio"){
+      x.setAttribute("type","checkbox");
+    } else {
+      x.setAttribute("type","radio");
+    }
+
+}
+function function3(){
+  document.getElementById("tab-one").setAttribute("type","radio");
+  document.getElementById("tab-two").setAttribute("type","radio");
+  document.getElementById("tab-four").setAttribute("type","radio");
+
+  //function2();
+  var x = document.getElementById("tab-three");
+    if(x.type === "radio"){
+      x.setAttribute("type","checkbox");
+    } else {
+      x.setAttribute("type","radio");
+    }
+
+}
+
+function function4(){
+  document.getElementById("tab-one").setAttribute("type","radio");
+  document.getElementById("tab-two").setAttribute("type","radio");
+  document.getElementById("tab-three").setAttribute("type","radio");
+
+  //document.getElementById("tab-two").setAttribute("type","checkbox");
+
+  //function2();
+  var x = document.getElementById("tab-four");
+    if(x.type === "radio"){
+      x.setAttribute("type","checkbox");
+    } else {
+      x.setAttribute("type","radio");
+    }
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div style="height:50px;background-color:white;">
+<nav class="navbar transparent navbar-inverse navbar-fixed-top hr">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="kp-icon.jpg" width="80px" height="50px" alt="Krispy Papad" style="position:fixed;top:0%;left:0%;">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    </div>
+<div class="abc1">
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right" style="font-family:Arial;">
+      <li class="active"><a href="#">Home</a></li>
+<li class="second"><a href="#" ><i class="fa fa-map-marker" style="font-size:20px;"aria-hidden="true"></i>&nbsp;&nbsp;Location</a></li>
+    </ul>
+</div>
+</div>
+  </div>
+</nav>
+</div>
+<div class="w3-card-2"style="margin-top:5%;margin-left:5%;width:90vw;background-color:white;">
+<i class="fa fa-check-circle" aria-hidden="true" style="color:#90EE90;font-size:3.2vw;margin-left:1%"></i>&nbsp;&nbsp;<span style="color:black;font-weight:bold;font-size:3vw;font-family:Arial">Your Booking Is Confirmed</span><span style="float:right;margin-right:2%;margin-top:2%;font-size:1.4vw;font-family:Arial;font-weight:500;">Booking ID: 123456789</span>
+<div style="font-size:1vw;color:#B8B8B8;margin-left:1%;font-family:Arial;">Thank you for booking with Krispy Papad. Do give us a chance to serve you again.</div>
+<div style="height:2vw;"></div>
+<div><span style="color:#2E90CC;font-size:2vw;font-weight:bold;font-family:Arial;margin-left:1%;">The Coldplay Concert</span><span style="float:right;margin-right:2%;width:20vw;height:9vw;margin-top:-4%"><img src="img1.jpg" width="100%" height="100%" alt="Bar Code"></span></div>
+<div style="height:3vw;"></div>
+<div style="line-height:50%;">
+<span style="margin-left:1%;font-family:Arial;"><span style="font-weight:600;font-size:1.5vw;">Tickets<span style="font-size:1vw;color:white;">0000000000000000000000000000000</span>Cost<span style="font-size:1vw;color:white;">0000000000000000000000000000000</span>Category</span></span>
+<div style="width:98%;margin-left:1%;"><hr/></div>
+<span style="margin-left:3%;font-family:Arial;"><span style="font-weight:600;font-size:1.3vw;color:#B0B0B0;">3&nbsp;<i class="fa fa-ticket" style="font-size:1.3vw;color:red;"aria-hidden="true"></i><span style="font-size:1vw;color:white;">00000000000000000000000000000000</span><i class="fa fa-inr" style="font-size:1.3vw;color:#B0B0B0;"aria-hidden="true"></i>&nbsp; 6340<span style="font-size:1vw;color:white;">000000000000000000000000000000000</span>Gold</span></span>
+</div>
+<div style="height:3vw;"></div>
+
+<div style="margin-left:1%;color:#2E90CC;font-size:1.3vw;font-weight:600;">12<sup>th</sup> June, 2017</div>
+<span style="margin-left:1%;color:#C0C0C0;font-size:1vw;font-family:Arial;">10<sup>th</sup> Cross Road, Dasrahalli Main road, Bhuvneshvari Nagar, Hebbal, Bangalore</span><span style="float:right;margin-right:0.5%;width:15vw;height:8vw;margin-top:-8%;"><img src="s.png" width="100%" height="100%" alt="Bar Code"></span>
+</div>
+<br/><br/>
+<div style="position:absolute;width:100%;">
+
+   <!--footer for large and md and sm-->
+    <div class="" style="">
+      <div class="row hidden-xs" style="background-color:#F5F5F5">
+        <div class="col-sm-2" style="padding: 4% 0% 4% 6%">
+          <div class="">
+            <img src="kp-icon.jpg" alt="" style="height: auto; width: 90%">
+          </div>
+          <div>
+            <p style="font-weight:bold;font-size:1.3em;color:grey;padding: 5% 0 0 5%"></p>
+            <p></p>
+          </div>
+        </div>
+      <div class="col-sm-2" style="padding: 5% 0 4% 8%">
+        <div>
+           <p style="font-weight:bold;font-size:0.9em;color:grey">CONTACT</p>
+           <div style="font-size:1.3em;color:grey">
+             <p>Email</p>
+             <p>Address</p>
+             <p>Mobile no.</p>
+           </div>
+        </div>
+      </div>
+      <div class="col-sm-2" style="padding: 5% 0% 4% 8%">
+        <div>
+           <p style="font-weight:bold;font-size:0.9em;color:grey">KRISPY PAPAD</p>
+           <div style="font-size:1.3em;color:grey">
+             <p>About</p>
+             <p>Careers</p>
+             <p>Help Center</p>
+           </div>
+        </div>
+      </div>
+      <div class="col-sm-2" style="padding: 5% 0% 4% 8%">
+        <div>
+           <p style="font-weight:bold;font-size:0.9em;color:grey">LEGAL</p>
+           <div style="font-size:1.3em;color:grey">
+             <p>Terms</p>
+             <p>Privacy Policy</p>
+           </div>
+        </div>
+      </div>
+      <div class="col-sm-3" style="padding: 5% 0% 4% 8%">
+        <div>
+           <p style="font-weight:bold;font-size:0.9em;color:grey">SOCIAL MEDIA</p>
+           <div style="font-size:1.3em;color:grey">
+             <p><i class="fa fa-facebook-square social-icons" style="color:#3b5998"></i>Facebook</p>
+             <p><i class="fa fa-instagram social-icons" style="color:#cd486b"></i>Instagram</p>
+             <p><i class="fa fa-twitter social-icons" style="color:#00aced"></i>Twitter</p>
+             <p><i class="fa fa-linkedin-square social-icons" style="color:#0077b5"></i>LinkedIn</p>
+           </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!--new accordian-->
+    <div class="">
+      <div class="hidden-sm hidden-md hidden-lg">
+        <div class="tab blue">
+          <input id="tab-one" type="radio" name="tabs2" onclick="function1()">
+          <label for="tab-one">CONTACT</label>
+          <div class="tab-content">
+            <p>Email</p>
+            <p>Address</p>
+            <p>Mobile no.</p>
+           </div>
+        </div>
+          <div class="tab blue">
+            <input id="tab-two" type="radio" name="tabs2" onclick="function2()">
+            <label for="tab-two">HEYMEDY</label>
+            <div class="tab-content">
+              <p>About</p>
+              <p>Careers</p>
+            </div>
+        </div>
+          <div class="tab blue">
+            <input id="tab-three" type="radio" name="tabs2" onclick="function3()">
+            <label for="tab-three">LEGAL</label>
+            <div class="tab-content">
+              <p>Terms</p>
+              <p>Privacy Policy</p>
+            </div>
+        </div>
+        <div class="tab blue">
+          <input id="tab-four" type="radio" name="tabs2" onclick="function4()">
+          <label for="tab-four">SOCIAL MEDIA</label>
+          <div class="tab-content">
+            <p><i class="fa fa-facebook-square social-icons" style="color:#3b5998"></i>Facebook</p>
+            <p><i class="fa fa-instagram social-icons" style="color:#cd486b"></i>Instagram</p>
+            <p><i class="fa fa-twitter social-icons" style="color:#00aced"></i>Twitter</p>
+          </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!--lower footer for lg md and sm-->
+    <div style="background-color:white;">
+     <div class="hidden-xs hidden-sm">
+       <div class="footer">
+         <div class="row">
+           <div class="col-sm-6">
+             <p style="padding: 3% 0% 0% 10%">Made with <i class="fa fa-heart" style="color: #F44336;font-size:0.9em"></i> in India</p>
+           </div>
+           <div class="col-sm-6">
+             <a href="www.heymedy.com" style="text-decoration:none;color:#757575"><p style="padding: 3% 0% 0% 45%">Copyrights &copy; 2017 Krispy Papad LLP</p></a>
+           </div>
+         </div>
+         </div>
+       </div>
+    </div>
+    <!--lower footer for sm-->
+    <div class="hidden-lg hidden-md hidden-xs" style="background-color:white;">
+      <div class="footer-sm" style="">
+        <div class="text-center" style="padding-top: 10px">
+            <p style="padding-top: 0px">Made with <i class="fa fa-heart" style="color: #F44336;font-size:0.9em"></i> in India</p>
+            <a href="www.heymedy.com" style="text-decoration:none;color:#757575"><p style="margin-top: -10px">Copyrights &copy; 2017 Krispy Papad LLP</p></a>
+          </div>
+      </div>
+    </div>
+    <!--lower footer for xs-->
+    <div style="background-color:white;">
+     <div class="hidden-lg hidden-md hidden-sm">
+          <div class="footer-xs">
+            <p style="margin-bottom: -10px;padding-top: 5px">Made with <i class="fa fa-heart" style="color: #F44336;;font-size:0.9em"></i> in India<br>Copyrights &copy; 2017 Krispy Papad LLP </p>
+          </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
