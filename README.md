@@ -1,4 +1,4 @@
 # Event-Management-Website
-An event management site for desktop (front-end project, for desktop) through which a user can view, select and book events.
+An event management site for desktop (front-end project) through which a user can view, select and book events.
 
 Technologies used: HTML, CSS, Bootstrap, Javascript, Angular js
